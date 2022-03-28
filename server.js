@@ -1,5 +1,7 @@
 const express = require ('express');
 
+
+
 //bring in mongoose
 const mongoose = require('mongoose');
 
@@ -12,6 +14,7 @@ const blogRouter = require('./routes/blogs');
 // Blog 라우터 for "let Blog ="
 const Blog = require('./models/Blog');
 const app = express();
+
 
 
 //connect to mongoose
@@ -28,6 +31,7 @@ app.set('view engine', 'ejs');
     //     async:true
     // };
 app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
 app.use(methodOverride('_method'));
 
 //route for the index
@@ -55,15 +59,9 @@ app.get('/', async (request, response)=>{
     response.render('index', { blogs: blogs})
 });
 
-app.use(express.static("public"))
+app.use(express.static(__dirname + '/public'))
 app.use('/blogs', blogRouter);
 
-// const http = require("http");
-// const port = process.env.PORT || 4000;
-
-// http.createServer((req,res)=> {
-//     console.log("서버가 요청을 받을 준비가 됐어요");
-// }).listen(port);
 
 // //listen port
 app.listen(4000)

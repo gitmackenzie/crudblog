@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
-  email: String,
   nickname: String,
+  id: String,
+  email: String,
   password: String,
 });
 UserSchema.virtual("userId").get(function () {
@@ -11,4 +12,5 @@ UserSchema.virtual("userId").get(function () {
 UserSchema.set("toJSON", {
   virtuals: true,
 });
-module.exports = mongoose.model("User", UserSchema);
+
+module.exports = mongoose.model('User', UserSchema);

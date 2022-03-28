@@ -11,11 +11,11 @@ mongoose.plugin(slug);
 const blogSchema = new mongoose.Schema({
     title:{
         type: String,
-        required: true
+        // required: true
     },
     author:{
         type: String,
-        required: true
+        // required: true
     },
     description:{
         type: String

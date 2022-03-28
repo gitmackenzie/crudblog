@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,17 +12,18 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/string-strip-html/dist/string-strip-html.umd.js"></script>
     <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'></script>
-    <script>tinymce.init({selector: 'textarea'});</script>
-    
+    <script>tinymce.init({ selector: 'textarea' });</script>
+
 
     <title>New blog post</title>
 </head>
+
 <body>
     <div class="container">
         <h1 class="mb-4">새로운 글</h1>
 
         <!-- 멀티파트 사용해서 첨부 이미지 업로드 가능하게 하는 부분 -->
-        <form action="/blogs" method="POST" enctype="multipart/form-data">
+        <form action="/blogs/new" method="POST" enctype="multipart/form-data">
             <div class="form-group">
 
 
@@ -36,20 +38,23 @@
 
             <div class="form-group">
                 <label for="description">내용</label>
-                <textarea name="description" placeholder="Description" class="form-control-file"></textarea>
+                <textarea name="description" placeholder="Description" class="form-control-file">
+              
+                </textarea>
             </div>
-        
-            <!-- 이미지 업로드 칸 -->
-            <div class="form-group">
-                <label for="image">Upload image</label>
-                <input type="file" name="image" id="image" class="form-"
-            </div>
+            
 
-            <div class="form-group">
-                <a href="/" class="btn btn-warning">취소</a>
-                <button type="submit" class="btn btn-primary">등록</button>
-            </div>
+            <!-- 이미지 업로드 칸 -->
+            <!-- <div class="form-group">
+                <label for="image">Upload image</label>
+                <input type="file" name="image" id="image" class="form-" > -->
+
+                <div class="form-group">
+                    <a href="/" class="btn btn-warning">취소</a>
+                    <button type="submit" class="btn btn-primary">등록</button>
+                </div>
         </form>
     </div>
 </body>
+
 </html>

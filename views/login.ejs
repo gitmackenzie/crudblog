@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,62 +14,64 @@
     <title>로그인</title>
 
 </head>
+
 <body>
     <!-- 아래 오브젝트 사용해서 프론트엔드 만들어야 함 -->
     <!-- nickname, email, password, confirmPassword -->
     <div class="hero">
         <div class="form-box"></div>
-            <div class="button-box">
-                <div id="btn"></div>
-              
-                <!-- <a href="/blogs/login"><button> button type="button" class="toggle-btn">로그인</button></a> -->
-                <a href="/login" button type="button" class="toggle-btn" onclick="login()">로그인</a>
-                <a href="/login" button type="button" class="toggle-btn" onclick="register()">회원가입</a>
-            </div>
-            <div class="social-icons">
-                <img src="fb.png">
-                <img src="fb.png">
-                <img src="fb.png">
-                
-                <!-- 원래 코드: <form id="login" class="input-group">
+        <div class="button-box">
+            <div id="btn"></div>
+
+            <!-- <a href="/blogs/login"><button> button type="button" class="toggle-btn">로그인</button></a> -->
+            <a href="/login" button type="button" class="toggle-btn" onclick="login()">로그인</a>
+            <a href="/login" button type="button" class="toggle-btn" onclick="register()">회원가입</a>
+        </div>
+        <div class="social-icons">
+            <img src="fb.png">
+            <img src="fb.png">
+            <img src="fb.png">
+
+            <!-- 원래 코드: <form id="login" class="input-group">
  -->
             <form action="/blogs/login" method="POST">
                 <div id="login" class="input-group">
-                    <input type="text" class="input-field" value="<%=user._id%>" placeholder="아이디" required>
-                    <input type="text" class="input-field" value="<%=password._id%>" placeholder="비밀번호" required>
+                    <input type="text" class="input-field" value="<%=user.id%>" placeholder="아이디" required>
+                    <input type="text" class="input-field" value="<%=user.password%>" placeholder="비밀번호" required>
                     <button type="submit" class="submit-btn">로그인</button>
                 </div>
             </form>
 
             <form action="blogs/login" method="POST"></form>
-                    <div id="register" class="input-group">
-                    <input type="text" class="input-field" value="<%=user.nickname%>" placeholder="닉네임" required>
-                    <input type="text" class="input-field" value="<%=user.id%>" placeholder="아이디" required>
-                    <input type="email" class="input-field" value="<%=user.email%>" placeholder="이메일" required>
-                    <input type="email" class="input-field" value="<%=user.password%>" placeholder="비밀번호를 입력하세요" required>
-                    <input type="email" class="input-field" value="<%=user.confirmPassword%>" placeholder="비밀번호를 재입력하세요" required>
-                    <button type="submit" class="submit-btn">회원가입</button>
-                    </div>
+            <div id="register" class="input-group">
+                <input type="text" class="input-field" name = "nickname" value="<%=user.nickname%>" placeholder="닉네임" required>
+                <!-- <input type="text" class="input-field"  name = "id" placeholder="아이디" required> -->
+                <input type="email" class="input-field" name = "email" value="<%=user.email%>" placeholder="이메일" required>
+                <input type="text" class="input-field" name = "password"  value="<%=user.password%>" placeholder="비밀번호를 입력하세요" required>
+                <input type="text" class="input-field"  name = "confirmPassword"  value="<%=user.confirmPassword%>" placeholder="비밀번호를 재입력하세요" required>
+                <button type="submit" class="submit-btn">회원가입</button>
+            </div>
             </form>
-          </div>
-          <script>
-              var x = document.getElementById("login");
-              var y = document.getElementById("regiester");
-              var z = document.getElementById("btn");
+        </div>
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("regiester");
+            var z = document.getElementById("btn");
 
-              function register(){
-                  x.style.left = "-400px";
-                  y.style.right = "50px";
-                  z.style.right = "110px";
-                }
-                function login(){
-                    x.style.left = "50px";
-                    y.style.right = "450px";
-                    z.style.right = "0px";
-                }
+            function register() {
+                x.style.left = "-400px";
+                y.style.right = "50px";
+                z.style.right = "110px";
+            }
+            function login() {
+                x.style.left = "50px";
+                y.style.right = "450px";
+                z.style.right = "0px";
+            }
 
 
-          </script>
+        </script>
 
 </body>
+
 </html>
