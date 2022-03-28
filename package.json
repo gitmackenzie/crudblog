@@ -1,0 +1,26 @@
+{
+  "name": "crudeblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "startDev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dompurify": "^2.3.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "jsdom": "^19.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.2.8",
+    "mongoose-slug-generator": "^1.0.4",
+    "string-strip-html": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/string-strip-html": "^5.0.1",
+    "nodemon": "^2.0.15"
+  }
+}
