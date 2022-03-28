@@ -8,17 +8,17 @@ const methodOverride = require('method-override');
 
 // const methodOverride = require('method-override');
 
-const blogRouter = require('./routes/blogs')
+const blogRouter = require('./routes/blogs');
 // Blog 라우터 for "let Blog ="
-const Blog = require('./models/Blog')
-const app = express()
+const Blog = require('./models/Blog');
+const app = express();
 
 
 //connect to mongoose
 mongoose.connect('mongodb://localhost/crudeblog', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    // useCreateIndex: true,
+    // useCreateIndex: true
 });
 
 
@@ -58,5 +58,12 @@ app.get('/', async (request, response)=>{
 app.use(express.static("public"))
 app.use('/blogs', blogRouter);
 
-//listen port
-app.listen(5000)
+// const http = require("http");
+// const port = process.env.PORT || 4000;
+
+// http.createServer((req,res)=> {
+//     console.log("서버가 요청을 받을 준비가 됐어요");
+// }).listen(port);
+
+// //listen port
+app.listen(4000)

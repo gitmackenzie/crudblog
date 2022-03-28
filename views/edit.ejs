@@ -19,8 +19,8 @@
 <body>
     <div class="container">
         <h1 class="mb-4">new blog</h1>
-
-        <form action="/blogs/new/<%=blog.id%>?_method=PUT " method="POST">
+<!-- TODO: action url  -->
+        <form action="/blogs/<%=blog.id%>?_method=PUT " method="POST">
             <div class="form-group">
                 <label for="title">글 수정하기 </label>
                 <!-- <label for="title">글 수정하기 <%= blog.title %></label> -->
